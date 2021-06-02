@@ -17,7 +17,7 @@ jobs:
     # Checkout code
     - uses: actions/checkout@v1
     - name: Build tests
-      run: mkdir build && cd build && cmake .. && make
+      run: source /opt/intel/compilers_and_libraries_2020/linux/mkl/bin/mklvars.sh intel64 && mkdir build && cd build && cmake .. && make
 
     # - uses: actions/checkout@v1
     # - name: configure
