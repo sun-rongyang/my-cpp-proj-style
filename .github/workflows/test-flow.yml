@@ -14,10 +14,12 @@ jobs:
       run: sudo apt-get install libgtest-dev # && cd /usr/src/gtest && sudo cmake CMakeLists.txt && sudo make && sudo ls lib && sudo cp lib/*.a /usr/lib && sudo ln -s /usr/lib/libgtest.a /usr/local/lib/libgtest.a && sudo ln -s /usr/lib/libgtest_main.a /usr/local/lib/libgtest_main.a
     - name: Install MKL library
       run: sudo apt install intel-mkl
+    - name: Install tree command and use it to locate MKL
+      run: sudo apt install tree && tree /opt
     # Checkout code
     - uses: actions/checkout@v1
     - name: Build tests
-      run: source /opt/intel/compilers_and_libraries_2020/linux/mkl/bin/mklvars.sh intel64 && mkdir build && cd build && cmake .. && make
+      run: mkdir build && cd build && cmake .. && make
 
     # - uses: actions/checkout@v1
     # - name: configure
