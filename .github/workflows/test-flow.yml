@@ -15,7 +15,7 @@ jobs:
     - name: Install MKL library
       run: sudo apt install intel-mkl
     - name: Install tree command and use it to locate MKL
-      run: sudo apt install tree && tree /opt
+      run: sudo apt install tree && tree /usr/local/lib
     # Checkout code
     - uses: actions/checkout@v1
     - name: Build tests
