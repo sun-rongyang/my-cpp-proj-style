@@ -13,9 +13,7 @@ jobs:
     - name: Install gtest manually
       run: sudo apt-get install libgtest-dev # && cd /usr/src/gtest && sudo cmake CMakeLists.txt && sudo make && sudo ls lib && sudo cp lib/*.a /usr/lib && sudo ln -s /usr/lib/libgtest.a /usr/local/lib/libgtest.a && sudo ln -s /usr/lib/libgtest_main.a /usr/local/lib/libgtest_main.a
     - name: Install MKL library
-      run: sudo apt install intel-mkl
-    - name: Install tree command and use it to locate MKL
-      run: sudo apt install tree && tree /usr/local/lib
+      run: sudo apt install intel-mkl-full && dpkg -L intel-mkl-full
     # Checkout code
     - uses: actions/checkout@v1
     - name: Build tests
