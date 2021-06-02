@@ -13,7 +13,7 @@ jobs:
     - name: Install gtest manually
       run: sudo apt-get install libgtest-dev # && cd /usr/src/gtest && sudo cmake CMakeLists.txt && sudo make && sudo ls lib && sudo cp lib/*.a /usr/lib && sudo ln -s /usr/lib/libgtest.a /usr/local/lib/libgtest.a && sudo ln -s /usr/lib/libgtest_main.a /usr/local/lib/libgtest_main.a
     - name: Install MKL library
-      run: sudo apt install libmkl-rt && dpkg -L libmkl-rt
+      run: sudo apt install libmkl-full-dev && dpkg -L libmkl-full-dev
     # Checkout code
     - uses: actions/checkout@v1
     - name: Build tests
