@@ -17,7 +17,7 @@ jobs:
     # Checkout code
     - uses: actions/checkout@v1
     - name: Build tests
-      run: mkdir build && cd build && cmake ..
+      run: mkdir build && cd build && cmake .. && make
 
     # - uses: actions/checkout@v1
     # - name: configure

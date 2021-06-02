@@ -8,3 +8,5 @@ if(DEFINED ENV{MKLROOT})
 else()
     message("MKLROOT not found")
 endif(DEFINED ENV{MKLROOT})
+
+add_subdirectory(src)
