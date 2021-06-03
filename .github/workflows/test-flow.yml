@@ -19,7 +19,8 @@ jobs:
     - name: Build tests
       run: mkdir build && cd build && cmake .. && make
     - name: Run tests
-      run: cd build && ./using_mkl
+      run: sudo apt install tree
+      run: tree && cd build && ./using_mkl
 
     # - uses: actions/checkout@v1
     # - name: configure
