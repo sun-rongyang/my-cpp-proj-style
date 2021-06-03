@@ -18,6 +18,8 @@ jobs:
     - uses: actions/checkout@v1
     - name: Build tests
       run: mkdir build && cd build && cmake .. && make
+    - name: Run tests
+      run: ./using_mkl
 
     # - uses: actions/checkout@v1
     # - name: configure
