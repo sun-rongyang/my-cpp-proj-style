@@ -19,7 +19,7 @@ jobs:
     - name: Build tests
       run: mkdir build && cd build && cmake .. && make
     - name: Run tests
-      run: pwd && ls -al && ./using_mkl
+      run: cd build && ./using_mkl
 
     # - uses: actions/checkout@v1
     # - name: configure
