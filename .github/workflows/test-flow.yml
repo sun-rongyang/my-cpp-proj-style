@@ -10,21 +10,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Install GoogleTest
-      run: sudo apt-get install libgtest-dev
-    - name: Install MKL
-      run: sudo apt install intel-mkl
+    - name: Install Testing dependences
+      run: sudo apt-get install libgtest-dev intel-mkl
     # Checkout code
     - uses: actions/checkout@v1
     - name: Build tests
       run: mkdir build && cd build && cmake .. && make
     - name: Run tests
       run: cd build && ./src/using_mkl
-
-    # - uses: actions/checkout@v1
-    # - name: configure
-    #   run: mkdir build && cd build && cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_FLAGS="-Werror" ..
-    # - name: make
-    #   run: cd build && make
-    # - name: Run Test
-    #   run: /home/runner/work/github_actions_gtest_example/github_actions_gtest_example/build/test/github_actions_gtest_example.test
