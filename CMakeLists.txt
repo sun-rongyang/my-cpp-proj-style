@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.12)
 project("CppWithMklAndGtest"
     DESCRIPTION "A demo to show how to test a Intel MKL and GoogleTest used C++ project using Github Action"
-    LANGUAGE CXX
+    LANGUAGES CXX
 )
 
 # Set MKL related PATHs
