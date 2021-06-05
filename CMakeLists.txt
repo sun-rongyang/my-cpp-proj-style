@@ -11,4 +11,4 @@ set(MKL_LINK_DIR /usr/lib/x86_64-linux-gnu)
 find_package(GTest REQUIRED)
 
 
-add_subdirectory(src)
+add_subdirectory(src bin)

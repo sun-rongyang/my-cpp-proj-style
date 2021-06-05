@@ -12,9 +12,12 @@ jobs:
     steps:
     - name: Install Testing dependences
       run: sudo apt-get install libgtest-dev intel-mkl
+
     # Checkout code
     - uses: actions/checkout@v1
-    - name: Build tests
+
+    - name: Build binary
       run: mkdir build && cd build && cmake .. && make
-    - name: Run tests
-      run: cd build && ./src/using_mkl
+
+    - name: Run binary
+      run: cd build && ./bin/using_mkl
