@@ -21,3 +21,6 @@ macro(add_unittest TEST_NAME TEST_SRC CFLAGS INCLUDE_DIRS LINK_LIBS)
 
   set_target_properties(${TEST_NAME} PROPERTIES FOLDER tests)
 endmacro()
+
+
+add_unittest(gtest_simple "gtest_simple.cc" "" "" "")

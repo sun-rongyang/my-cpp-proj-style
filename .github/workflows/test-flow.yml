@@ -21,3 +21,6 @@ jobs:
 
     - name: Run binary
       run: cd build && ./bin/using_mkl
+    
+    - name: Run tests
+      run: cd build && ctest
