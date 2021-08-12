@@ -5,9 +5,9 @@ This repository demonstrates a kind of C++ project style which includes code for
 ## Code formatting
 Based on [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html), implemented by [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html).
 
-Configuration file: `.clang-format`
+Configuration file: [`.clang-format`](.clang-format)
 
 
 ## Continuous Integration
 ### Code formatting checker (Github Action)
-Configuration file: `.github/workflows/clang-format-check.yml`
+Configuration file: [`.github/workflows/clang-format-check.yml`](.github/workflows/clang-format-check.yml)
