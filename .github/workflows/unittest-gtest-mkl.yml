@@ -1,4 +1,6 @@
-name: test-flow
+---
+# Github action for running unittests with GTest and MKL library
+name: unittest-gtest-mkl
 
 on:
   push:
@@ -24,3 +26,4 @@ jobs:
     
     - name: Run tests
       run: cd build && ctest
+...
